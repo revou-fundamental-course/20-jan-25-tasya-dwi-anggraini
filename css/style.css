@@ -39,17 +39,17 @@ button {
 }
 
 .bg-black {
-    background-color: rgb(106, 144, 255);
+   background-color: darkblue;
 }
 
 .bg-cadet-blue {
-    background-color: rgb(29, 76, 176);
+    background-color: cornflowerblue;
 }
 
 .result-section {
     padding: 16px;
     text-align: center;
-    background-color: antiquewhite;
+    background-color: rgb(187, 222, 255);
 }
 
 #result-bmi {
