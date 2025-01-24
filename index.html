@@ -6,50 +6,85 @@
         <title>kalkulator BMI</title>
         <link rel="stylesheet" href="css\style.css">
     </head>
+
     <body>
-        <header>
+        <header class="main-header">
             <h1>Kalkulator BMI</h1>
         </header>
-        <main>
-            <!--introduction-->
-            <article>
-                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki tubuh</p>
-            </article> 
 
-            <!--form-->
+    <main>
+        <!-- Left Content -->
+        <section>
+            <!-- Introduction -->
+            <article>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang dengan Kalkulator BMI!</p>
+            </article>
+
+            <!-- Form -->
             <form>
                 <div class="form-group">
-                    <label for="input-berat-badan">Berat badan(kg)</label>
+                    <label for="input-berat-badan">Berat Badan (kg)</label>
                     <input type="number" id="input-berat-badan">
-
                 </div>
 
                 <div class="form-group">
-                    <label for="input-usia">Usia(tahun)</label>
+                    <label for="input-usia">Usia (tahun)</label>
                     <input type="number" id="input-usia">
-
                 </div>
 
                 <div class="form-group">
-                    <label for="input-tinggi-badan">Tinggi badan(cm)</label>
+                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
                     <input type="number" id="input-tinggi-badan">
-
                 </div>
 
                 <div>
-                    <button>Hitung BMI</button>
-                    <button>Reset</button>
+                    <button class="bg-cadet-blue">Hitung BMI</button>
+                    <button class="bg-black">Reset</button>
                 </div>
             </form>
 
-            <!--fitur information-->
+            <!-- Feature Information -->
             <article>
                 <header>
-                    
+                    <h2>Keunggulan Fitur</h2>
                 </header>
-            </article>
+                <ul type="1">
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ul>
 
-        </main>
+                <p>Kalkulator ini hanya digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum, Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M</p>
+            </article>
+        </section>
+
+        <section>
+            <section class="result-section">
+                <header>
+                    <h2>Hasil</h2>
+                </header>
+
+                <div>
+                    <span id="result-bmi">0</span>
+                </div>
+            </section>
+
+            <article>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                    and
+                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                    leap
+                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
+                    the
+                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
+                    publishing
+                    software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </article>
+        </section>
+    </main>
+
         <footer>
             <span>Made by TasyaDwiA@2025</span>
         </footer>

@@ -39,11 +39,11 @@ button {
 }
 
 .bg-black {
-    background-color: black;
+    background-color: rgb(106, 144, 255);
 }
 
 .bg-cadet-blue {
-    background-color: cadetblue;
+    background-color: rgb(29, 76, 176);
 }
 
 .result-section {
