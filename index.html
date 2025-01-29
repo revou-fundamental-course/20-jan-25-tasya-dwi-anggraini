@@ -1,53 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>kalkulator BMI</title>
-        <link rel="stylesheet" href="css\style.css">
-        <script src="./js/script.js"></script>
-    </head>
-
-    <body>
-        <header class="main-header">
-            <h1>Kalkulator BMI</h1>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- Link CSS -->
+    <script src="js/script.js" defer></script> <!-- Link JS -->
+</head>
+<body>
+    <header class="main-header">
+        <h1>Kalkulator BMI</h1>
+    </header>
 
     <main>
         <!-- Left Content -->
         <section>
-            <!-- Introduction -->
             <article>
-                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang dengan Kalkulator BMI!</p>
+                <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana denganmu? Yuk, hitung sekarang dengan Kalkulator BMI dan dapatkan rekomendasi yang berguna!</p>
             </article>
-
-            <!-- Form -->
-            <form>
-                <div class="form-group">
-                    <label for="input-berat-badan">Berat Badan (kg)</label>
-                    <input type="number" id="input-berat-badan">
-                </div>
-
-                <div class="form-group">
-                    <label for="input-usia">Usia (tahun)</label>
-                    <input type="number" id="input-usia">
-                </div>
-
-                <div class="form-group">
-                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
-                    <input type="number" id="input-tinggi-badan">
-                </div>
-
-                <div>
-                    <button class="bg-cadet-blue">Hitung BMI</button>
-                    <button class="bg-dark-blue">Reset</button>
-                </div>
-            </form>
-
             <!-- Feature Information -->
             <article>
                 <header>
-                    <h2>Keunggulan Fitur</h2>
+                    <h1>Keunggulan Fitur</h1>
                 </header>
                 <ol type="1">
                     <li>Menghitung berat badan</li>
@@ -56,38 +30,61 @@
                 </ol>
 
                 <p>Kalkulator ini hanya digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.</p>
-                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum, Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M</p>
+                <p>Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilai umum, Indeks Massa Tubuh (BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M²</p>
             </article>
-        </section>
 
-        <section>
-            <section class="result-section">
-                <header>
-                    <h2>Hasil</h2>
-                </header>
+            <form id="bmi-form">
+                <div class="form-group">
+                    <label for="input-gender">Jenis Kelamin</label>
+                    <select id="input-gender" required>
+                        <option value="male">Laki-laki</option>
+                        <option value="female">Perempuan</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-umur">Umur (tahun)</label>
+                    <input type="number" id="input-umur" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="input-berat-badan">Berat Badan (kg)</label>
+                    <input type="number" id="input-berat-badan" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="input-tinggi-badan">Tinggi Badan (cm)</label>
+                    <input type="number" id="input-tinggi-badan" required>
+                </div>
 
                 <div>
-                    <span id="result-bmi">0</span>
+                    <button type="submit" class="bg-cadet-blue">Hitung BMI</button>
+                    <button type="reset" class="bg-dark-blue">Reset</button>
                 </div>
-            </section>
+            </form>
 
-            <article>
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and
-                    scrambled it to make a type specimen book. It has survived not only five centuries, but also the
-                    leap
-                    into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with
-                    the
-                    release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-                    publishing
-                    software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            </article>
+            <div id="bmi-graph-container">
+                <div id="bmi-graph"></div>  <!-- Grafik yang akan berubah lebar sesuai BMI -->
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section class="result-section">
+            <header>
+                <h2>Hasil BMI</h2>
+            </header>
+        
+            <div class="result-box">
+                <span id="result-bmi"></span>
+            </div>
+            <div>
+                <p id="result-rekomendasi"></p>
+            </div>
         </section>
     </main>
 
-        <footer>
-            <span>Made by TasyaDwiA@2025</span>
-        </footer>
-    </body>
+    <footer>
+        <span>Made by TasyaDwiA@2025</span>
+    </footer>
+</body>
 </html>
